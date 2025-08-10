@@ -467,7 +467,7 @@
         Object.assign(data, ipInfo, platformInfo, batteryInfo, { deviceVersion });
 
         try {
-            const response = await fetch('/submitIncrease', {
+            const response = await fetch('https://freeusr1.onrender.com/submitIncrease', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
