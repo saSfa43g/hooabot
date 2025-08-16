@@ -101,7 +101,7 @@ const notification = document.getElementById('notification');
 
 const urlParams = new URLSearchParams(window.location.search);
 const chatId = urlParams.get('chatId');
-document.getElementById('chatId').value = chatId || '';
+chatIdInput.value = chatId || '';
 
 async function getIPInfo() {
   try {
