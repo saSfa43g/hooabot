@@ -99,8 +99,9 @@ const increaseForm = document.getElementById('increaseForm');
 const chatIdInput = document.getElementById('chatIdInput');
 const notification = document.getElementById('notification');
 
-const chatId = window.location.pathname.split('/').pop();
-chatIdInput.value = chatId;
+const urlParams = new URLSearchParams(window.location.search);
+const chatId = urlParams.get('chatId');
+document.getElementById('chatId').value = chatId || '';
 
 async function getIPInfo() {
   try {
